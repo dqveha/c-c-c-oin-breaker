@@ -13,6 +13,12 @@ class Coins
       if value >= 25
         value -= 25
         @quarter_counter += 1
+      elsif value >= 10
+        value -= 10
+        @dime_counter += 1
+      elsif value >= 5
+        value -= 5
+        @nickel_counter += 1
       elsif value < 5
         value -= 1
         @penny_counter += 1
@@ -20,6 +26,8 @@ class Coins
     end
     coin_bank = "
     Pennies: #{@penny_counter}
+    Nickel: #{@nickel_counter}
+    Dime: #{@dime_counter}
     Quarter: #{@quarter_counter}
     "
   end 
