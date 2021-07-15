@@ -1,3 +1,5 @@
 def coin(value)
-  return 1
+  if value%1 === 0
+    amount = "pennies: #{value}"
+  end
 end
